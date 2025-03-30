@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('images/moon.webp') no-repeat center center/cover;
+    background: url('images/moon.webp') no-repeat center/cover fixed;
     overflow: hidden;
 }
 
@@ -25,7 +25,7 @@ body {
     border-radius: 10px;
     max-width: 90%;
     width: 400px;
-    min-height: 500px;
+    min-height: 470px;
     display: none;
     animation: fadeIn 1.5s ease-in-out;
 }
