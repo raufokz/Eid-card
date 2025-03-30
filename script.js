@@ -7,18 +7,27 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function showGreeting() {
-    let nameInput = document.getElementById("nameInput");
-    let name = nameInput.value.trim();
-
+    let name = document.getElementById("nameInput").value.trim();
     if (name) {
-        document.querySelector(".name-text").innerText = name.toUpperCase();
+        document.getElementById("greetingText").innerHTML = "Eid Mubarak, " + name + "!";
         document.querySelector(".input-box").style.display = "none";
         document.getElementById("greetingBox").style.display = "block";
         startLanterns();
+
+        // Send Name to Email (Formspree)
+        fetch("https://formspree.io/f/mrbpaywj", { // Replace with your Formspree endpoint
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: name })
+        })
+        .then(response => response.json())
+        .then(data => console.log("Name Sent to Email:", data))
+        .catch(error => console.error("Error:", error));
     } else {
-        alert("⚠️ Please enter your name!");
+        alert("Please enter your name!");
     }
 }
+
 
 // Floating Lantern Animation
 function startLanterns() {
