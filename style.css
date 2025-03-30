@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Noto+Nastaliq+Urdu&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -12,42 +12,37 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('images/moon.webp') no-repeat center/cover fixed;
+    background: url('images/moon.jpg') ;
     overflow: hidden;
+    text-align: center;
 }
 
-/* Greeting Card Container */
+/* Greeting Card */
 .container {
-    text-align: center;
-    padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    border-radius: 10px;
-    max-width: 90%;
+    border-radius: 12px;
     width: 400px;
-    min-height: 470px;
+    padding: 25px;
     display: none;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Eid Text */
 .eid-text {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
 }
 
-/* Name Text */
 .name-text {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     color: gold;
-    display: block;
-    margin-top: 5px;
 }
 
 /* Urdu Message */
 .urdu {
-    font-size: 24px;
+    font-size: 22px;
     font-family: 'Noto Nastaliq Urdu', serif;
     margin-top: 10px;
 }
@@ -55,22 +50,21 @@ body {
 /* Lantern Animation */
 .lantern {
     position: absolute;
-    width: 40px;
-    height: 60px;
+    width: 30px;
+    height: 50px;
     background: gold;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
-    animation: float 5s infinite linear;
+    animation: floatLantern 6s infinite linear;
 }
 
-@keyframes float {
+@keyframes floatLantern {
     0% { transform: translateY(100vh) rotate(0); opacity: 1; }
     100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
 }
 
 /* Input Box */
 .input-box {
-    text-align: center;
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
@@ -80,12 +74,12 @@ body {
 }
 
 input {
-    width: 90%;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
     font-size: 18px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 button {
@@ -114,15 +108,30 @@ button:hover {
     margin-top: 10px;
     object-fit: cover;
 }
+footer {
+    position: fixed;
+    bottom: 10px; /* Adjust spacing */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.6); /* Slight transparency */
+    padding: 8px 0;
+}
 
-/* Hide buttons while downloading */
-.hide-during-download {
-    display: none;
+footer a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-    h1 { font-size: 28px; }
-    .urdu { font-size: 20px; }
+    .eid-text { font-size: 28px; }
+    .urdu { font-size: 18px; }
     .container, .input-box { width: 90%; }
 }

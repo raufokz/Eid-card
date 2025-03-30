@@ -9,33 +9,28 @@
 </head>
 <body>
 
-    <!-- Input Box for Name -->
     <div class="input-box">
         <h2>Enter Your Name</h2>
         <input type="text" id="nameInput" placeholder="Your Name" required>
         <button onclick="showGreeting()">Submit</button>
     </div>
 
-    <!-- Eid Mubarak Greeting Card -->
     <div class="container" id="greetingBox">
-        <img src="images/profile1.jpeg" class="eid-image" id="profileImage">
-        
+        <img src="images/eid.avif" class="eid-image">
         <h1 id="greetingText">
             <span class="eid-text"> Eid Mubarak </span><br>
             <span class="name-text"></span>
         </h1>
-
         <p class="urdu">میرے طرف سے آپ کو اور آپکی فیملی کو عید کی خوشیاں بہت بہت مبارک ہوں۔</p>
-
-        <!-- Share on WhatsApp Button -->
         <button class="share-btn" onclick="shareOnWhatsApp()">
             <i class="fas fa-share-alt"></i> Share on WhatsApp
         </button>
-
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Eid Mubarak Greeting Card. All rights reserved.</p>
+        <p><a href="https://github.com/raufokz" target="_blank" rel="noopener noreferrer">Abdur Rauf</a></p>
+    </footer>
     
+    <script src="script.js"></script>
 </body>
 </html>
